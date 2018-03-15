@@ -7,9 +7,13 @@ Socket.IO client.
 """
 from setuptools import setup
 
+dependency_links = [
+    'https://github.com/jezeniel/python-engineio-client/tarball/websocket#egg=python-engineio-client-0.2'
+]
+
 setup(
     name='python-socketio-client',
-    version='0.1',
+    version='0.2',
     url='http://github.com/veo-labs/python-socketio-client/',
     license='MIT',
     author='Frédéric Sureau',
@@ -20,8 +24,9 @@ setup(
     zip_safe=False,
     include_package_data=True,
     platforms='any',
+    dependency_links=dependency_links,
     install_requires=[
-        'python-engineio-client>=0.1',
+        'python-engineio-client==0.2',
         'gevent>=1.0.2',
     ],
     classifiers=[
@@ -36,4 +41,3 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
 )
-
